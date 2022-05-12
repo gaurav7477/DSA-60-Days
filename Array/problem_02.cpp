@@ -1,5 +1,5 @@
 // linear search  for searching element -> BigO(n)  traverse from starting point
-// Binary search  for searching element -> BigO(nlogn)  searching start from middle point
+// Binary search  for searching element -> BigO(logn)  searching start from middle point
 
 #include <iostream>
 using namespace std;
