@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 
+
 // 1.tower of honoi
 
 /*
@@ -22,6 +23,7 @@ int main(){
     return 0;
 }
 */
+
 
 
 
@@ -58,6 +60,7 @@ int main(){
 */
 
 
+
 // 3. move x in end if string
 /*
  string move_x_in_end(string s){
@@ -88,7 +91,35 @@ int main(){
 */
 
 
-// generate substring
+// 4. GENERATING SUBSTRING
+/*
+void subsequence(string s,string ans){
+
+    if (s.length() == 0)
+    {   cout<<ans<<endl;
+        return;
+    }
+
+    char ch = s[0];
+    string ros = s.substr(1);
+    subsequence(ros,ans);
+    subsequence(ros,ans+ch);
+
+}
+
+int main(){
+    cout<<"enter the string :"<<endl;
+    string s;
+    cin>>s;
+
+    cout<<"All the possible substring are :"<<endl;
+    subsequence(s,"");
+    return 0;
+}
+*/
+
+
+// GENERATING SUBSTRING WITH ASCIII NUMBER
 
 void subsequence(string s,string ans){
 
@@ -106,8 +137,14 @@ void subsequence(string s,string ans){
     subsequence(ros,ans);
     subsequence(ros,ans+ch);
     subsequence(ros,ans+to_string(code));
+}
 
 int main(){
-    subsequence("AB","");
+    cout<<"enter the string :"<<endl;
+    string s;
+    cin>>s;
+
+    cout<<"All the possible substring With ascii number :"<<endl;
+    subsequence(s,"");
     return 0;
-}  
+}
